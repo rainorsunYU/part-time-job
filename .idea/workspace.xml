@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3ae4d79e-fe3e-43ab-95d6-0150af6b4c76" name="Default Changelist" comment="my git">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/MySpringBoot04Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/component/LoginHandlerInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/config/DruidConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/config/MybatisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/config/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/controller/BusinessController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/domain/Business.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/domain/Job.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/mapper/BusinessMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/mapper/JobMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/service/IBusinessService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/service/IJobService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/service/impl/BusinessServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/service/impl/JobServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mappers/JobMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/resources/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bushome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/login/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/background/bg_login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/background/bg_login1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/background/home.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons/8_avatar_2754583.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons/cou.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons/msg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons/write.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/show/show10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/show/show20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/show/show30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/show/showforus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/business.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/wxwyz/springboot/MySpringBoot04ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/my-spring-boot-04.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/MySpringBoot04Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/component/LoginHandlerInterceptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/config/DruidConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/config/MybatisConfig$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/config/MybatisConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/config/WebMvcConfig$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/config/WebMvcConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/controller/BusinessController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/controller/HelloController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/domain/Business.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/domain/Job.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/mapper/BusinessMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/mapper/JobMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/service/IBusinessService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/service/IJobService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/service/impl/BusinessServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/service/impl/JobServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mybatis/mappers/JobMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/resources/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bushome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/login/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/background/bg_login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/background/bg_login1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/background/home.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/icons/8_avatar_2754583.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/icons/cou.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/icons/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/icons/msg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/icons/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/icons/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/icons/write.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/show/show10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/show/show20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/show/show30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/show/showforus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/business.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/wxwyz/springboot/MySpringBoot04ApplicationTests.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\MAVEN\localMavenRepository" />
+        <option name="mavenHome" value="F:/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="F:\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="1UkR85f24CXP0GhRaMP5WXsbqqU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XML" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wxwyz.springboot.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\MAVEN\SpringBootProject\my-spring-boot-04\src\main\resources\static\images\icons" />
+      <recent name="E:\MAVEN\SpringBootProject\my-spring-boot-04\src\main\resources\static\images\show" />
+      <recent name="E:\MAVEN\SpringBootProject\my-spring-boot-04\src\main\resources\static\images\background" />
+      <recent name="E:\MAVEN\SpringBootProject\my-spring-boot-04\src\main\resources\static\js" />
+      <recent name="E:\MAVEN\SpringBootProject\my-spring-boot-04\src\main\resources\static\css" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MySpringBoot04Application">
+    <configuration name="MySpringBoot04ApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-spring-boot-04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wxwyz.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wxwyz.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.wxwyz.springboot.MySpringBoot04ApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySpringBoot04ApplicationTests.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-spring-boot-04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wxwyz.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wxwyz.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.wxwyz.springboot.MySpringBoot04ApplicationTests" />
+      <option name="METHOD_NAME" value="test02" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySpringBoot04ApplicationTests.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-spring-boot-04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wxwyz.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wxwyz.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.wxwyz.springboot.MySpringBoot04ApplicationTests" />
+      <option name="METHOD_NAME" value="test03" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySpringBoot04Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="my-spring-boot-04" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wxwyz.springboot.MySpringBoot04Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndTriggerFile" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.MySpringBoot04ApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.MySpringBoot04ApplicationTests.test02" />
+      <item itemvalue="JUnit.MySpringBoot04ApplicationTests.test03" />
+      <item itemvalue="Spring Boot.MySpringBoot04Application" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MySpringBoot04ApplicationTests.test03" />
+        <item itemvalue="JUnit.MySpringBoot04ApplicationTests.test02" />
+        <item itemvalue="JUnit.MySpringBoot04ApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ae4d79e-fe3e-43ab-95d6-0150af6b4c76" name="Default Changelist" comment="" />
+      <created>1575898443022</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575898443022</updated>
+      <workItem from="1575898449409" duration="3816000" />
+      <workItem from="1575902295247" duration="6795000" />
+      <workItem from="1575973952573" duration="17724000" />
+      <workItem from="1576029690570" duration="824000" />
+      <workItem from="1576060134469" duration="17370000" />
+      <workItem from="1576115363776" duration="1575000" />
+      <workItem from="1576209485025" duration="2213000" />
+      <workItem from="1576223957761" duration="18534000" />
+      <workItem from="1576252004312" duration="1587000" />
+      <workItem from="1576336712975" duration="505000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="my git" />
+    <option name="LAST_COMMIT_MESSAGE" value="my git" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="261" y="2" key="#Inspections" timestamp="1576064585876">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="261" y="2" key="#Inspections/0.0.1536.864@0.0.1536.864" timestamp="1576064585876" />
+    <state x="94" y="70" width="1378" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576060365094">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="94" y="70" width="1378" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1576060365094" />
+    <state x="444" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575902047344">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="444" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1575902047344" />
+    <state x="530" y="37" width="476" height="827" key="#com.intellij.ide.util.MemberChooser" timestamp="1576071957862">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="530" y="37" width="476" height="827" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1576071957862" />
+    <state x="449" y="141" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576209507857">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="449" y="141" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.864@0.0.1536.864" timestamp="1576209507857" />
+    <state x="388" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575976660408">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="388" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1575976660408" />
+    <state x="235" y="0" key="CommitChangelistDialog2" timestamp="1576337244552">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="235" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1576337244552" />
+    <state x="499" y="124" key="FileChooserDialogImpl" timestamp="1576336885961">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="124" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1576336885961" />
+    <state width="1483" height="24" key="GridCell.Tab.0.bottom" timestamp="1576253595607">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="24" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1576253595607" />
+    <state width="1483" height="24" key="GridCell.Tab.0.center" timestamp="1576253595607">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="24" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1576253595607" />
+    <state width="1483" height="24" key="GridCell.Tab.0.left" timestamp="1576253595607">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="24" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1576253595607" />
+    <state width="1483" height="24" key="GridCell.Tab.0.right" timestamp="1576253595607">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="24" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1576253595607" />
+    <state width="1483" height="24" key="GridCell.Tab.1.bottom" timestamp="1576253595607">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="24" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1576253595607" />
+    <state width="1483" height="24" key="GridCell.Tab.1.center" timestamp="1576253595607">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="24" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1576253595607" />
+    <state width="1483" height="24" key="GridCell.Tab.1.left" timestamp="1576253595607">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="24" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1576253595607" />
+    <state width="1483" height="24" key="GridCell.Tab.1.right" timestamp="1576253595607">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="24" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1576253595607" />
+    <state width="1483" height="383" key="GridCell.Tab.2.bottom" timestamp="1576064459903">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="383" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1576064459903" />
+    <state width="1483" height="383" key="GridCell.Tab.2.center" timestamp="1576064459903">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="383" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1576064459903" />
+    <state width="1483" height="383" key="GridCell.Tab.2.left" timestamp="1576064459903">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="383" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1576064459903" />
+    <state width="1483" height="383" key="GridCell.Tab.2.right" timestamp="1576064459903">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="383" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1576064459903" />
+    <state x="146" y="0" key="SettingsEditor" timestamp="1576336804577">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="146" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1576336804577" />
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1575977115287">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1575977115287" />
+  </component>
+</project>
