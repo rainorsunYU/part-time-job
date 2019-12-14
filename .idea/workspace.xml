@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3ae4d79e-fe3e-43ab-95d6-0150af6b4c76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +208,7 @@
       <workItem from="1576209485025" duration="2213000" />
       <workItem from="1576223957761" duration="18534000" />
       <workItem from="1576252004312" duration="1587000" />
-      <workItem from="1576336712975" duration="3056000" />
+      <workItem from="1576336712975" duration="3383000" />
     </task>
     <task id="LOCAL-00001" summary="my git">
       <created>1576337319725</created>
