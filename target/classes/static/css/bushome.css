@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding-top: 56px;
+    /*background-image: url("../../static/images/background/home.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    background: #f2f2f2;
+    font-size: 16px;
+}
+
+.user-drop {
+    margin: 0;
+    padding-left: 0;
+    width: auto;
+    float: left;
+}
+
+.div-info {
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 5px;
+    height: 46px;
+    width: 100px;
+    margin-right: 5px;
+}
+
+.div-info > a {
+    position: absolute;
+    width: 70px;
+    left: 60%;
+    top: 48%;
+    transform: translate(-40%, -52%);
+    font-size: 21px;
+}
+
+.div-info > img {
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    float: left;
+    margin-right: 6px
+}
+
+.media-main {
+    position: relative;
+    padding:14px 18px;
+    margin-bottom: 6px;
+    border-radius: 7px;
+    height: auto;
+    background: white;
+    font-size: 20px;
+}
+
+.top-main-bar {
+
+}

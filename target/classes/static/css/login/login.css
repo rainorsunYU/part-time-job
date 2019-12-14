@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.right_box {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-animation-name: left;
+    animation-name: left;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.header > h2 {
+    margin: 0;
+    color: #4f46a5;
+}
+
+.header > h4 {
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.right_container{
+    padding: 0 50px;
+    /*border: 2px solid red;*/
+}
+
+.login_box {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login_box > p {
+    text-align: center;
+}
+
+.login_box > p > a {
+    color: #91d9ed;
+    font-size: 16px;
+}
+
+.login_input {
+    height: 46px;
+    padding: 0 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Rubik', sans-serif;
+    outline: 0;
+    transition: .2s;
+    margin: 20px 0 8px 0;
+}
+
+.left_box {
+    flex: 1;
+    background-color: white;
+    background-image: url("../../images/background/bg_login1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*transition: 1s;*/
+    float: left;
+}
+
+.login_input:focus {
+    border-color: #0f7ef1;
+}
+
+.login_box > button {
+    margin:30px 0 5px;
+    padding-top: 10px;
+    width: 100%;
+    height: 49px;
+    /*border: 2px solid cyan;*/
+    text-align: center;
+    vertical-align: center;
+    /*background: linear-gradient(to right, #de48b5 0%, #0097ff 100%);*/
+    background: linear-gradient(to right,#de48b5,#0097ff,#de48b5,#0097ff);
+    background-size: 300%;
+    display: flex;
+    border-radius: 5px;
+    color: #93edeb;
+    letter-spacing: 1px;
+    font-family: "Microsoft YaHei UI";
+    font-size: 20px;
+    text-transform: uppercase;
+    justify-content: space-around;
+    cursor:pointer;
+    transition:.6s;
+    outline: none;
+}
+
+.login_box > button:hover{
+    background-position-x: 100%;
+}
+
+.animation {
+    -webkit-animation-name: move;
+    animation-name: move;
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s;
+}
+
+.a1 {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.a2 {
+    -webkit-animation-delay: 2.1s;
+    animation-delay: 2.1s;
+}
+
+.a3 {
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+}
+
+.a4 {
+    -webkit-animation-delay: 2.3s;
+    animation-delay: 2.3s;
+}
+
+.a5 {
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+
+.a6 {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+.a7 {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+@-moz-keyframes  move{
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translateX(-40px);
+        transform: translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes move {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translateY(-40px);
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translateY(-40px);
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-moz-keyframes left {
+    0% {
+        opacity: 0;
+        width: 440px;
+    }
+    100% {
+        opacity: 1;
+        padding: 20px 40px;
+        width: 440px;
+    }
+}
+@-webkit-keyframes left {
+    0% {
+        opacity: 0;
+        width: 440px;
+    }
+    100% {
+        opacity: 1;
+        padding: 20px 40px;
+        width: 440px;
+    }
+}
+
+@keyframes left {
+    0% {
+        opacity: 0;
+        width: 440px;
+    }
+    100% {
+        opacity: 1;
+        padding: 20px 40px;
+        width: 440px;
+    }
+}

@@ -1,0 +1,55 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/part-time-job?serverTimezone=CTT&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: 2017012636
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    filters: stat,wall
+    maxActive: 20
+    initialSize: 5
+    maxWait: 60000
+    minIdle: 10
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    maxOpenPreparedStatements: 50
+    removeAbandoned: true
+    removeAbandonedTimeout: 1800
+    logAbandoned: true
+  #热部署工具配置
+  devtools:
+    restart:
+      enabled: true
+  #thymeleaf模板配置
+  #springMvc配置
+  mvc:
+    # 定义匹配静态资源路径,*****非常重要*****
+    static-path-pattern: /static/**
+  resources:
+    # 定义静态资源位置
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+  thymeleaf:
+    #缓冲的配置
+    cache: false
+    check-template: true
+    check-template-location: true
+    #开启MVC thymeleaf 视图解析
+    enabled: true
+    encoding: utf-8
+    mode: HTML5
+#    prefix: classpath:/templates/
+#    suffix: .html
+
+#mybatis映射
+mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mappers/*.xml
+  type-aliases-package: com.wxwyz.springboot.domain
+  configuration:
+    map-underscore-to-camel-case: true
+
