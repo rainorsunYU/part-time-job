@@ -37,7 +37,8 @@
     <div class="container user-drop">
         <div class="dropdown" th:if="${session.businessLogin != null}">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" th:text="${session.businessLogin.getAccount()}">
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+               th:text="${session.businessLogin.getAccount()}">
                 登录
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -91,50 +92,96 @@
 </nav>
 
 
-<div class="container" style="margin-top: 30px">
-    <h2>填写详细的兼职信息</h2>
+<div class="container" style="margin-top: 50px">
+    <h3>填写详细的兼职信息</h3>
+
     <form>
         <div class="form-group">
             <label for="title">工作内容简介:</label>
             <input type="text" class="form-control" id="title" placeholder="不超过20个字...">
         </div>
-        <div class="form-group">
-            <label for="pwd"></label>
-            <input type="password" class="form-control" id="pwd" placeholder="">
-        </div>
+        <h6>工作的详细信息:</h6>
         <div class="row">
-            <div class="col-sm-3" style="background-color:lavender;">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="">
+            <div class="col-sm-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">人数</span>
+                    </div>
+                    <input type="text" class="form-control">
                 </div>
             </div>
-            <div class="col-sm-3" style="background-color:lavenderblush;">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="">
+            <div class="col-sm-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">时长</span>
+                    </div>
+                    <input type="text" class="form-control">
+                    <select name="cars" class="custom-select-sm" style="margin-left: 1px;width: 90px;height: 47px">
+                        <option selected>小时</option>
+                        <option value="Runoob">天</option>
+                        <option value="Taobao">月</option>
+                    </select>
                 </div>
             </div>
-            <div class="col-sm-3" style="background-color:lavender;">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="">
+            <div class="col-sm-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">薪水</span>
+                    </div>
+                    <input type="text" class="form-control">
+
+                    <select name="cars" class="custom-select-sm" style="margin-left: 1px;width: 90px;height: 47px">
+                        <option selected>每小时</option>
+                        <option value="Runoob">每天</option>
+                        <option value="Taobao">每月</option>
+                        <option value="Taobao">总薪水</option>
+                    </select>
                 </div>
+
             </div>
-            <div class="col-sm-3" style="background-color:lavenderblush;">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="">
+            <div class="col-sm-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">地点</span>
+                    </div>
+                    <select name="cars" class="custom-select-sm" style="width: 72%;height: 47px">
+                        <option selected>皖西学院</option>
+                        <option value="Runoob">云路街</option>
+                        <option value="Taobao">红街</option>
+                        <option value="Taobao">万达广场</option>
+                        <option value="Taobao">等等</option>
+                    </select>
                 </div>
             </div>
         </div>
-        <p>以下实例演示了 textarea 的样式。</p>
+
         <div class="form-group">
             <label for="comment">工作的详细内容:</label>
             <textarea class="form-control" rows="5" id="comment"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="row">
+            <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary" data-toggle="tooltip"
+                        title="请确认好信息后再发布!" data-placement="bottom"
+                        style="width: 160px;height: 55px;margin-bottom: 15px">发&nbsp;&nbsp;&nbsp;&nbsp;布
+                </button>
+            </div>
+            <div class="col-sm-10">
+                <div class="alert alert-success">
+                    <strong>如有什么问题</strong> 请认真阅读 <a href="#" class="alert-link">相关说明</a>。
+                </div>
+            </div>
+
+        </div>
     </form>
 </div>
 
 
-
-
 </body>
 </html>
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

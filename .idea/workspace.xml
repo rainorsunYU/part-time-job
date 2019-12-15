@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ae4d79e-fe3e-43ab-95d6-0150af6b4c76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/upload.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/uploadJob.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/mapper/JobMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/mapper/JobMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/service/IJobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/service/IJobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/service/impl/JobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/service/impl/JobServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mappers/JobMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mappers/JobMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/login/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/userInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/controller/BusinessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wxwyz/springboot/controller/BusinessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bushome.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bushome.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/business.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/business.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/config/WebMvcConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/config/WebMvcConfig$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/config/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/config/WebMvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/mapper/JobMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/mapper/JobMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/service/IJobService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/service/IJobService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/service/impl/JobServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wxwyz/springboot/service/impl/JobServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mappers/JobMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mappers/JobMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/login/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/uploadJob.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/uploadJob.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/business.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/business.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +84,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XML" />
-    <property name="last_opened_file_path" value="E:/JAVA/SHIYAN" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -118,8 +101,8 @@
       <recent name="com.wxwyz.springboot.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\MAVEN\SpringBootProject\my-spring-boot-04\src\main\resources\static\css" />
       <recent name="E:\MAVEN\SpringBootProject\my-spring-boot-04\src\main\resources\templates" />
+      <recent name="E:\MAVEN\SpringBootProject\my-spring-boot-04\src\main\resources\static\css" />
       <recent name="E:\MAVEN\SpringBootProject\my-spring-boot-04\src\main\resources\static" />
       <recent name="E:\MAVEN\SpringBootProject\my-spring-boot-04\src\main\resources\static\images\icons" />
       <recent name="E:\MAVEN\SpringBootProject\my-spring-boot-04\src\main\resources\static\images\show" />
@@ -235,7 +218,7 @@
       <workItem from="1576252004312" duration="1587000" />
       <workItem from="1576336712975" duration="3537000" />
       <workItem from="1576403298862" duration="14873000" />
-      <workItem from="1576418770195" duration="5489000" />
+      <workItem from="1576418770195" duration="11294000" />
     </task>
     <task id="LOCAL-00001" summary="my git">
       <created>1576337319725</created>
@@ -287,38 +270,38 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="124" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1576424188008" />
-    <state width="1483" height="330" key="GridCell.Tab.0.bottom" timestamp="1576422390518">
+    <state width="1485" height="230" key="GridCell.Tab.0.bottom" timestamp="1576425703064">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="330" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1576422390518" />
-    <state width="1483" height="330" key="GridCell.Tab.0.center" timestamp="1576422390518">
+    <state width="1485" height="230" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1576425703064" />
+    <state width="1485" height="230" key="GridCell.Tab.0.center" timestamp="1576425703064">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="330" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1576422390518" />
-    <state width="1483" height="330" key="GridCell.Tab.0.left" timestamp="1576422390517">
+    <state width="1485" height="230" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1576425703064" />
+    <state width="1485" height="230" key="GridCell.Tab.0.left" timestamp="1576425703064">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="330" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1576422390517" />
-    <state width="1483" height="330" key="GridCell.Tab.0.right" timestamp="1576422390518">
+    <state width="1485" height="230" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1576425703064" />
+    <state width="1485" height="230" key="GridCell.Tab.0.right" timestamp="1576425703064">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="330" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1576422390518" />
-    <state width="1483" height="330" key="GridCell.Tab.1.bottom" timestamp="1576422390518">
+    <state width="1485" height="230" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1576425703064" />
+    <state width="1485" height="230" key="GridCell.Tab.1.bottom" timestamp="1576425703064">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="330" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1576422390518" />
-    <state width="1483" height="330" key="GridCell.Tab.1.center" timestamp="1576422390518">
+    <state width="1485" height="230" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1576425703064" />
+    <state width="1485" height="230" key="GridCell.Tab.1.center" timestamp="1576425703064">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="330" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1576422390518" />
-    <state width="1483" height="330" key="GridCell.Tab.1.left" timestamp="1576422390518">
+    <state width="1485" height="230" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1576425703064" />
+    <state width="1485" height="230" key="GridCell.Tab.1.left" timestamp="1576425703064">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="330" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1576422390518" />
-    <state width="1483" height="330" key="GridCell.Tab.1.right" timestamp="1576422390518">
+    <state width="1485" height="230" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1576425703064" />
+    <state width="1485" height="230" key="GridCell.Tab.1.right" timestamp="1576425703064">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="330" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1576422390518" />
+    <state width="1485" height="230" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1576425703064" />
     <state width="1483" height="425" key="GridCell.Tab.2.bottom" timestamp="1576418738484">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -335,10 +318,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1483" height="425" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1576418738484" />
-    <state x="146" y="0" key="SettingsEditor" timestamp="1576425380429">
+    <state x="146" y="0" key="SettingsEditor" timestamp="1576426019131">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="146" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1576425380429" />
+    <state x="146" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1576426019131" />
     <state x="261" y="94" key="Vcs.Push.Dialog.v2" timestamp="1576339088265">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
