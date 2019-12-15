@@ -23,6 +23,19 @@ public class JobServiceImpl implements IJobService {
 
     @Transactional
     @Override
+    public List<Job> findJobByAccount(String name) {
+        List<String> list = jobMapper.queryAllPublisher();
+        List<Job> jobList = null;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).equals(name)){
+                jobList = jobMapper.queryJobByName(name);
+            }
+        }
+        return jobList;
+    }
+
+    @Transactional
+    @Override
     public int postAJob(Job job) {
         return jobMapper.insertJob(job);
     }

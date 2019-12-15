@@ -1,12 +1,13 @@
 * {
     box-sizing: border-box;
     text-decoration: none;
+    outline: none;
 }
 
 body {
     font-family: 'Rubik', sans-serif;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -42,7 +43,7 @@ body {
     color: rgba(0, 0, 0, 0.4);
 }
 
-.right_container{
+.right_container {
     padding: 0 50px;
     /*border: 2px solid red;*/
 }
@@ -68,6 +69,7 @@ body {
     border: 2px solid #ddd;
     border-radius: 4px;
     font-family: 'Rubik', sans-serif;
+    font-size: 16px;
     outline: 0;
     transition: .2s;
     margin: 20px 0 8px 0;
@@ -89,31 +91,42 @@ body {
 }
 
 .login_box > button {
-    margin:30px 0 5px;
+    margin: 30px 0 5px;
     padding-top: 10px;
     width: 100%;
     height: 49px;
     /*border: 2px solid cyan;*/
+    box-shadow: none;
+    box-sizing: border-box;
     text-align: center;
     vertical-align: center;
     /*background: linear-gradient(to right, #de48b5 0%, #0097ff 100%);*/
-    background: linear-gradient(to right,#de48b5,#0097ff,#de48b5,#0097ff);
+    background: linear-gradient(to right, #de48b5, #0097ff, #de48b5, #0097ff);
     background-size: 300%;
     display: flex;
     border-radius: 5px;
     color: #93edeb;
-    letter-spacing: 1px;
     font-family: "Microsoft YaHei UI";
     font-size: 20px;
     text-transform: uppercase;
     justify-content: space-around;
-    cursor:pointer;
-    transition:.6s;
+    cursor: pointer;
+    transition: .6s;
+    text-decoration-line: none;
     outline: none;
 }
 
-.login_box > button:hover{
+.login_box > button:hover {
     background-position-x: 100%;
+}
+
+.radio_box {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+#stu {
+    margin-left: 30px;
 }
 
 .animation {
@@ -156,11 +169,18 @@ body {
     -webkit-animation-delay: 2.5s;
     animation-delay: 2.5s;
 }
+
 .a7 {
     -webkit-animation-delay: 2.5s;
     animation-delay: 2.5s;
 }
-@-moz-keyframes  move{
+
+.a8 {
+    -webkit-animation-delay: 2.6s;
+    animation-delay: 2.6s;
+}
+
+@-moz-keyframes move {
     0% {
         opacity: 0;
         visibility: hidden;
@@ -174,6 +194,7 @@ body {
         transform: translateY(0);
     }
 }
+
 @-webkit-keyframes move {
     0% {
         opacity: 0;
@@ -215,6 +236,7 @@ body {
         width: 440px;
     }
 }
+
 @-webkit-keyframes left {
     0% {
         opacity: 0;

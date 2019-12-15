@@ -10,6 +10,10 @@ import java.util.List;
 @Component
 public interface JobMapper {
 
+    public List<String> queryAllPublisher();
+
+    public List<Job> queryJobByName(String name);
+
     public List<Job> queryAllJob();
 
     public int insertJob(Job job);

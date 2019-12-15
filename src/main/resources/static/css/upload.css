@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding-top: 56px;
+    /*background-image: url("../../static/images/background/home.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    background: #f2f2f2;
+    font-size: 16px;
+}
+
+.user-drop {
+    margin: 0;
+    padding-left: 0;
+    width: auto;
+    float: left;
+}
+

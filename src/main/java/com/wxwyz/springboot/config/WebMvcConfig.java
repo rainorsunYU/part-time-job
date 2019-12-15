@@ -22,21 +22,23 @@ public class WebMvcConfig implements WebMvcConfigurer {
         WebMvcConfigurer web = new WebMvcConfigurer() {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
-                registry.addViewController("/").setViewName("business");
+                registry.addViewController("/").setViewName("login");
                 registry.addViewController("/index.html").setViewName("login");
                 registry.addViewController("/main.html").setViewName("business");
+                registry.addViewController("/upload.html").setViewName("uploadJob");
             }
             //拦截器
             @Override
             public void addInterceptors(InterceptorRegistry registry) {
                 registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                        .excludePathPatterns("/index.html","/main.html","/static/**","/user/login");
+                        .excludePathPatterns("/index.html","/static/**","/favicon.ico","/business/login");
             }
         };
         return web;
     }
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-
+        registry.addResourceHandler("/**")
+                .addResourceLocations("classpath:/static/");
     }
 }

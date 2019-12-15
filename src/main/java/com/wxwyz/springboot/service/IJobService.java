@@ -8,5 +8,7 @@ public interface IJobService {
 
     public List<Job> findAllJob();
 
+    public List<Job> findJobByAccount(String name);
+
     public int postAJob(Job job);
 }

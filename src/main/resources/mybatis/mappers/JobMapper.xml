@@ -14,6 +14,14 @@
 <!--        <result property="jobReleaseTime" column="job_release_time"/>-->
 <!--    </resultMap>-->
 
+    <select id="queryAllPublisher" resultType="string">
+        select job_publisher from job;
+    </select>
+
+    <select id="queryJobByName" parameterType="string" resultType="com.wxwyz.springboot.domain.Job">
+        select * from job where job_publisher=#{jobPublisher};
+    </select>
+
     <select id="queryAllJob" resultType="com.wxwyz.springboot.domain.Job">
         select * from job;
     </select>

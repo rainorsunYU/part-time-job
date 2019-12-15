@@ -2,7 +2,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login</title>
+    <link rel="shortcut icon" th:href="@{../static/favicon.ico}"/>
     <link rel="stylesheet" type="text/css" href="../static/css/login/login.css"
           th:href="@{../static/css/login/login.css}">
     <script type="text/javascript" src="../static/js/jquery/jquery-3.4.1.min.js"
@@ -24,13 +25,13 @@
                        onfocus="this.placeholder = ''" onblur="this.placeholder = '账号'">
                 <input type="password" name="pwd_login" id="pwd_login" class="login_input animation a4" placeholder="密码"
                        onfocus="this.placeholder = ''" onblur="this.placeholder = '密码'">
-                <div id="checkBox">
+                <div class="animation a5 radio_box">
                     <input type="radio" id="bus" name="user" value="business">商家
                     <input type="radio" id="stu" name="user" value="student">学生
                 </div>
-                <button id="submit" class="animation a6">登&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp录</button>
-                <p class="animation a5"><a href="#">忘记密码</a></p>
-                <p class="animation a7">没有账号？<a href="registered.jsp">注册</a></p>
+                <button id="submit" class="animation a6" onfocus="this.blur()">登&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp录</button>
+                <p class="animation a7"><a href="#">忘记密码</a></p>
+                <p class="animation a8">没有账号？<a href="registered.jsp">注册</a></p>
             </div>
         </div>
     </div>
@@ -41,7 +42,6 @@
 <script>
     $(function () {
 
-
         $("#submit").click(function () {
             var $user_login = $('#user_login').val();
             var $pwd_login = $('#pwd_login').val()
@@ -50,13 +50,31 @@
             } else if ($pwd_login == null || $pwd_login == "") {
                 alert(2);
             } else if ($('#bus').is(":checked") == true) {
-                alert(3);
-                $.ajax({})
+                $.ajax({
+                    url: "/business/login",
+                    type: "POST",
+                    contentType: 'application/x-www-form-urlencoded',
+                    // dataType:"json",
+                    data: {
+                        user_login: $user_login,
+                        pwd_login: $pwd_login,
+                    },
+                    success:function (result) {
+                        if (result==="0"){
+                            window.location.replace("/business/home");
+                        }
+                        if (result==="1"){ alert("密码错误"); }
+                        if (result==="-1"){ alert("账号错误"); }
+                    },
+                    error:function () {
+                        alert("系统异常");
+                    }
+                })
             } else if ($('#stu').is(":checked") == true) {
                 alert(4);
-                $.ajax({
-                    url: "/",
-                })
+                // $.ajax({
+                //     url: "/",
+                // })
             } else {
                 alert(5);
             }
