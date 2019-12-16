@@ -10,5 +10,7 @@ public interface IJobService {
 
     public List<Job> findJobByAccount(String name);
 
+    public Job findBusinessJob(Integer jobId);
+
     public int postAJob(Job job);
 }

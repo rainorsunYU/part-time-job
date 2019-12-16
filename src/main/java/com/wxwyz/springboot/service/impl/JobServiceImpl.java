@@ -36,6 +36,12 @@ public class JobServiceImpl implements IJobService {
 
     @Transactional
     @Override
+    public Job findBusinessJob(Integer jobId) {
+        return jobMapper.queryJobById(jobId);
+    }
+
+    @Transactional
+    @Override
     public int postAJob(Job job) {
         return jobMapper.insertJob(job);
     }

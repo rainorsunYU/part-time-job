@@ -26,6 +26,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 registry.addViewController("/index.html").setViewName("login");
                 registry.addViewController("/main.html").setViewName("business");
                 registry.addViewController("/upload.html").setViewName("uploadJob");
+                registry.addViewController("/jobInfo.html").setViewName("jobInfo");
             }
             //拦截器
             @Override

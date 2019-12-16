@@ -14,6 +14,8 @@ public interface JobMapper {
 
     public List<Job> queryJobByName(String name);
 
+    public Job queryJobById(Integer jobId);
+
     public List<Job> queryAllJob();
 
     public int insertJob(Job job);

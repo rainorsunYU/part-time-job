@@ -21,6 +21,10 @@
     <select id="queryJobByName" parameterType="string" resultType="com.wxwyz.springboot.domain.Job">
         select * from job where job_publisher=#{jobPublisher};
     </select>
+    
+    <select id="queryJobById" parameterType="int" resultType="com.wxwyz.springboot.domain.Job">
+        select * from job where job_id=#{jobId};
+    </select>
 
     <select id="queryAllJob" resultType="com.wxwyz.springboot.domain.Job">
         select * from job;
