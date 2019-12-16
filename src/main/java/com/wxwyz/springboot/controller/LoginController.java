@@ -2,8 +2,10 @@ package com.wxwyz.springboot.controller;
 
 import com.wxwyz.springboot.domain.Business;
 import com.wxwyz.springboot.domain.Job;
+import com.wxwyz.springboot.domain.Student;
 import com.wxwyz.springboot.service.impl.BusinessServiceImpl;
 import com.wxwyz.springboot.service.impl.JobServiceImpl;
+import com.wxwyz.springboot.service.impl.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,14 +26,15 @@ public class LoginController {
     @Autowired
     private JobServiceImpl jobServiceImpl;
 
+    @Autowired
+    private StudentServiceImpl studentServiceImpl;
+
     @RequestMapping(value = "/business/home")
     public String businessHome(HttpServletRequest request, Model model){
         Business business = (Business) request.getSession().getAttribute("businessLogin");
         List<Job> jobLists = jobServiceImpl.findJobByAccount( business.getAccount() );
-//        request.getSession().setAttribute("jobList",jobList);
         model.addAttribute("jobLists",jobLists);
 //        return "redirect:/main.html";
-//        return "index";
         return "business";
     }
 
@@ -39,6 +42,7 @@ public class LoginController {
     @PostMapping("/business/login")
     public String loginVerify(@RequestParam("user_login") String userLogin,
                               @RequestParam("pwd_login") String pwdLogin, HttpServletRequest request) {
+
 
         Business business = new Business();
         business.setAccount(userLogin);
@@ -49,5 +53,28 @@ public class LoginController {
         return result;
     }
 
+
+    @ResponseBody
+    @PostMapping("/student/login")
+    public String loginStuVerify(@RequestParam("user_login") String userLogin,
+                              @RequestParam("pwd_login") String pwdLogin, HttpServletRequest request) {
+
+
+        Student student = new Student();
+        student.setStuAccount(userLogin);
+        student.setStuPassword(pwdLogin);
+        request.getSession().setAttribute("studentLogin", student);
+
+        String result = String.valueOf(studentServiceImpl.findStudent(student));
+        return result;
+    }
+
+    @RequestMapping(value = "/student/home")
+    public String studentHome(HttpServletRequest request, Model model){
+        List<Job> allJobLists = jobServiceImpl.findAllJob();
+        model.addAttribute("allJobLists",allJobLists);
+
+        return "student";
+    }
 
 }

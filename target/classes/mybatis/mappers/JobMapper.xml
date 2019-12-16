@@ -18,8 +18,8 @@
         select job_publisher from job;
     </select>
 
-    <select id="queryJobByName" parameterType="string" resultType="com.wxwyz.springboot.domain.Job">
-        select * from job where job_publisher=#{jobPublisher};
+    <select id="queryJobByNameDesc" parameterType="string" resultType="com.wxwyz.springboot.domain.Job">
+        select * from job where job_publisher=#{jobPublisher} order by job_release_time desc;
     </select>
     
     <select id="queryJobById" parameterType="int" resultType="com.wxwyz.springboot.domain.Job">
@@ -37,5 +37,17 @@
          #{jobSalary},#{jobLocation},#{jobReleaseTime},#{likes},#{views},#{comments});
 
     </insert>
+
+    <update id="updateViews" parameterType="int">
+        update job set views=views+1 where job_id=#{jobId};
+    </update>
+
+    <select id="findComments" parameterType="int" resultType="int">
+        select count(*) from comment where job_id=#{jobId};
+    </select>
+
+    <select id="updateComments" parameterType="com.wxwyz.springboot.domain.Job" resultType="integer">
+        update job set comments=#{comments} where job_id=#{jobId}
+    </select>
 
 </mapper>

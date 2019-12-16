@@ -1,0 +1,40 @@
+
+.p_dt {
+    height: 28px;
+    border-radius: 10px;
+}
+
+.data-001 {
+    float: left;
+    color: darkgray;
+    font-size: 14px;
+    display: inline-block;
+    /*margin-top: 5px;*/
+    /*padding-left: 15px;*/
+}
+
+.btn001 {
+    float: right;
+    display: inline-block;
+    margin-top: 5px;
+    padding-right: 5px;
+}
+
+.btn001 a {
+    color: darkgray;
+    font-size: 14px;
+    display: inline-block;
+    background: url("/static/images/icons/tubiao.png") no-repeat 0 0;
+    background-size: 20px;
+    padding-left: 25px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.btn001 a:nth-child(2) {
+    background-position: 0 -19px;
+}
+
+.btn001 a:nth-child(3) {
+    background-position: 0 -40px;
+}

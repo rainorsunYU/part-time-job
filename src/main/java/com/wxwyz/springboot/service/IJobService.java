@@ -13,4 +13,10 @@ public interface IJobService {
     public Job findBusinessJob(Integer jobId);
 
     public int postAJob(Job job);
+
+    public int updateViews(Integer id);
+
+    public int findComments(Integer id);
+
+    public Integer updateComments(Job job);
 }

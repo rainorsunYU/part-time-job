@@ -13,7 +13,7 @@ public class Job {
     private String jobContent;
     private Integer userCounts;
     private String workingHours;
-    private Double jobSalary;
+    private String jobSalary;
     private String jobLocation;
     private Date jobReleaseTime;
     private Integer likes;

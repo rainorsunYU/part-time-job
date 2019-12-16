@@ -9,15 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginHandlerInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        Object user = request.getSession().getAttribute("businessLogin");
-        if (user==null){
+        Object user1 = request.getSession().getAttribute("businessLogin");
+        Object user2 = request.getSession().getAttribute("studentLogin");
+        if (user1!=null||user2!=null){
+            //如果用户不为空，放行
+            return true;
+        }else {
             //如果登陆用户为空直接转到登陆页面
             request.setAttribute("errorMsg","请先登录！");
             request.getRequestDispatcher("/index.html").forward(request,response);
             return false;
-        }else {
-            //如果用户不为空，放行
-            return true;
         }
     }
 

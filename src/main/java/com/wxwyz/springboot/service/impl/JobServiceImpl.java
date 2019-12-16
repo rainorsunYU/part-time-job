@@ -28,7 +28,7 @@ public class JobServiceImpl implements IJobService {
         List<Job> jobList = null;
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).equals(name)){
-                jobList = jobMapper.queryJobByName(name);
+                jobList = jobMapper.queryJobByNameDesc(name);
             }
         }
         return jobList;
@@ -44,5 +44,23 @@ public class JobServiceImpl implements IJobService {
     @Override
     public int postAJob(Job job) {
         return jobMapper.insertJob(job);
+    }
+
+    @Transactional
+    @Override
+    public int updateViews(Integer id) {
+        return jobMapper.updateViews(id);
+    }
+
+    @Transactional
+    @Override
+    public int findComments(Integer id) {
+        return jobMapper.findComments(id);
+    }
+
+    @Transactional
+    @Override
+    public Integer updateComments(Job job) {
+        return jobMapper.updateComments(job);
     }
 }

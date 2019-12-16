@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_1558918_cur3udrqn8.css"
           th:href="@{https://at.alicdn.com/t/font_1558918_cur3udrqn8.css}">
 
+    <script th:src="@{../static/js/jquery/jquery-3.4.1.min.js}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
@@ -95,7 +96,6 @@
 <div class="container" style="margin-top: 50px">
     <h3>填写详细的兼职信息</h3>
 
-    <form>
         <div class="form-group">
             <label for="title">工作内容简介:</label>
             <input type="text" class="form-control" id="title" placeholder="不超过20个字...">
@@ -107,7 +107,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">人数</span>
                     </div>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="counts">
                 </div>
             </div>
             <div class="col-sm-3">
@@ -115,11 +115,11 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">时长</span>
                     </div>
-                    <input type="text" class="form-control">
-                    <select name="cars" class="custom-select-sm" style="margin-left: 1px;width: 90px;height: 47px">
-                        <option selected>小时</option>
-                        <option value="Runoob">天</option>
-                        <option value="Taobao">月</option>
+                    <input type="text" class="form-control" id="hours">
+                    <select id="select_time" class="custom-select-sm" style="margin-left: 1px;width: 90px;height: 47px">
+                        <option selected value="小时">小时</option>
+                        <option value="天">天</option>
+                        <option value="月">月</option>
                     </select>
                 </div>
             </div>
@@ -128,13 +128,13 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">薪水</span>
                     </div>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="salary">
 
-                    <select name="cars" class="custom-select-sm" style="margin-left: 1px;width: 90px;height: 47px">
-                        <option selected>每小时</option>
-                        <option value="Runoob">每天</option>
-                        <option value="Taobao">每月</option>
-                        <option value="Taobao">总薪水</option>
+                    <select id="select_date" class="custom-select-sm" style="margin-left: 1px;width: 90px;height: 47px">
+                        <option selected value="每小时">每小时</option>
+                        <option value="每天">每天</option>
+                        <option value="每月">每月</option>
+                        <option value="总薪水">总薪水</option>
                     </select>
                 </div>
 
@@ -144,12 +144,12 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">地点</span>
                     </div>
-                    <select name="cars" class="custom-select-sm" style="width: 72%;height: 47px">
-                        <option selected>皖西学院</option>
-                        <option value="Runoob">云路街</option>
-                        <option value="Taobao">红街</option>
-                        <option value="Taobao">万达广场</option>
-                        <option value="Taobao">等等</option>
+                    <select id="select_address" class="custom-select-sm" style="width: 72%;height: 47px">
+                        <option selected value="皖西学院">皖西学院</option>
+                        <option value="云路街">云路街</option>
+                        <option value="红街">红街</option>
+                        <option value="万达广场">万达广场</option>
+                        <option value="等等">等等</option>
                     </select>
                 </div>
             </div>
@@ -161,7 +161,7 @@
         </div>
         <div class="row">
             <div class="col-sm-2">
-                <button type="submit" class="btn btn-primary" data-toggle="tooltip"
+                <button id="btn" class="btn btn-primary" data-toggle="tooltip"
                         title="请确认好信息后再发布!" data-placement="bottom"
                         style="width: 160px;height: 55px;margin-bottom: 15px">发&nbsp;&nbsp;&nbsp;&nbsp;布
                 </button>
@@ -173,7 +173,6 @@
             </div>
 
         </div>
-    </form>
 </div>
 
 
@@ -183,5 +182,45 @@
 <script>
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
+
+
+        $('#btn').click(function () {
+            console.log($('#title').val());
+            console.log($('#counts').val());
+            console.log($('#hours').val());
+            console.log($('#select_time').val());
+            console.log($('#salary').val());
+            console.log($('#select_date').val());
+            console.log($('#select_address').val());
+            console.log($('#comment').val());
+            if ($('#title').val()==null||$('#title').val()==""){
+                alert(1);
+            }else {
+                $.ajax({
+                    url: "/business/upload",
+                    type: "POST",
+                    contentType: 'application/x-www-form-urlencoded',
+                    data: {
+                        title: $('#title').val(),
+                        counts: $('#counts').val(),
+                        hours: $('#hours').val(),
+                        select_time: $('#select_time').val(),
+                        salary: $('#salary').val(),
+                        select_date: $('#select_date').val(),
+                        select_address: $('#select_address').val(),
+                        content: $('#comment').val(),
+                    },
+                    success:function (result) {
+                        if (result=="1"){
+                            window.location.replace("/business/home");
+                        }
+                        if (result=="0"){ alert("发布出现问题"); }
+                    },
+                    error:function () {
+                        alert("系统异常");
+                    }
+                })
+            }
+        })
     });
 </script>

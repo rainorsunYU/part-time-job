@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -14,6 +13,7 @@
 
     <link rel="stylesheet " type="text/css" href="../static/css/bushome.css" th:href="@{../static/css/bushome.css}">
 
+    <link rel="stylesheet" type="text/css" href="../static/css/xfx.css" th:href="@{../static/css/xfx.css}">
     <script src="https://at.alicdn.com/t/font_1558918_cur3udrqn8.js"></script>
 
     <style src="text/css">
@@ -37,7 +37,8 @@
     <div class="container user-drop">
         <div class="dropdown" th:if="${session.businessLogin != null}">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" th:text="${session.businessLogin.getAccount()}">
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+               th:text="${session.businessLogin.getAccount()}">
                 登录
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -49,9 +50,27 @@
                 <a class="dropdown-item" href="#">退出登录</a>
             </div>
         </div>
-        <div th:if="${session.businessLogin == null}">
+
+        <div th:if="${session.businessLogin == null && session.studentLogin == null}">
             <button>登录</button>
         </div>
+
+        <div class="dropdown" th:if="${session.studentLogin != null}">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink2"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+               th:text="${session.studentLogin.getStuAccount()}">
+                登录
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <hr/>
+                <a class="dropdown-item" href="#">退出登录</a>
+            </div>
+        </div>
+
     </div>
 
 
@@ -65,7 +84,10 @@
             <li class="nav-item active" style="width: 100px;">
                 <div class="div-info">
                     <img th:src="@{../static/images/icons/home.png}">
-                    <a class="nav-link" th:href="@{/business/home}">主页<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" th:if="${session.businessLogin!=null}" th:href="@{/business/home}">主页<span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-link" th:if="${session.studentLogin!=null}" th:href="@{/student/home}">主页<span
+                            class="sr-only">(current)</span></a>
                 </div>
             </li>
             <li class="nav-item" style="width: 100px;">
@@ -80,12 +102,12 @@
                     <a class="nav-link" href="#">信息</a>
                 </div>
             </li>
-            <li class="nav-item" style="width: 100px;">
-                <div class="div-info">
-                    <img th:src="@{../static/images/icons/write.png}">
-                    <a class="nav-link" th:href="@{/upload.html}">发布</a>
-                </div>
-            </li>
+            <!--            <li class="nav-item" style="width: 100px;">-->
+            <!--                <div class="div-info">-->
+            <!--                    <img th:src="@{../static/images/icons/write.png}">-->
+            <!--                    <a class="nav-link" th:href="@{/upload.html}">发布</a>-->
+            <!--                </div>-->
+            <!--            </li>-->
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -101,7 +123,8 @@
             <h4>兼职详细信息</h4><br/>
             <div class="media-main">
                 <div>
-                    <img th:src="@{../static/images/icons/8_avatar_2754583.png}" class="mr-3 rounded-circle" alt="" style="float: left;height: 55px">
+                    <img th:src="@{../static/images/icons/8_avatar_2754583.png}" class="mr-3 rounded-circle" alt=""
+                         style="float: left;height: 55px">
                     <div style="height: 50px">
                         <h5 class="mt-0" th:text="${jobInformation.getJobPublisher()}"></h5>
                         <h6 th:text="${jobInformation.getJobReleaseTime()}">time</h6>
@@ -110,7 +133,7 @@
 
                 <div style="font-size: 20px">
                     <br/><br/>
-<!--                    招聘简介：<p style="font-size: 22px" th:text="${jobInformation.getJobTitle()}"></p>-->
+                    <!--                    招聘简介：<p style="font-size: 22px" th:text="${jobInformation.getJobTitle()}"></p>-->
 
                     <h6>招聘简介:</h6>
                     <div class="jumbotron" style="padding: 10px 10px">
@@ -128,26 +151,46 @@
                 <div style="margin-top: 15px;">
                     浏览<span th:text="${jobInformation.getViews()}">0</span>
                     点赞<span th:text="${jobInformation.getLikes()}">0</span>
-                </div><br/><br/>
+                </div>
+                <br/><br/>
 
                 回复<span th:text="${jobInformation.getComments()}">0</span><br/>
+                <div id="user-comment">
+                    <div class=" border" style="padding: 8px" th:if="${comments!=null}"
+                         th:each="comment:${comments}">
+                        <div>
+                            <img src="https://static.runoob.com/images/mobile-icon.png"
+                                 class="align-self-start mr-3 rounded-circle" style="width:60px;float:left">
+                            <h6 th:text="${comment.getCommentUserId()}">评论人</h6>
+                            <span class="data-001">2019-7-1 13:20:56</span>
+                        </div><br>
+                        <div class="media-body" style="margin:8px 0 0 40px">
+                            <sapn th:text="${comment.getCommentContent()}">评论内容</sapn>
+                        </div>
+                        <br>
 
-                <div class="media border" style="padding: 8px">
-                    <img src="https://static.runoob.com/images/mobile-icon.png" class="align-self-start mr-3 rounded-circle" style="width:60px">
-                    <div class="media-body">
-                        <h6>头部 -- 菜鸟教程</h6>
-                        <sapn>学的不仅是技术，更是梦想！！</sapn><span style="float: right">time</span>
+                        <div class="p_dt">
+                            <span class="btn001">
+							    <a href="javascript:;" class="infoTop">0</a>
+							    <a href="javascript:;" class="infoDown">0</a>
+							    <a href="javascript:;" class="infoDel">删除</a>
+						    </span>
+                        </div>
+
                     </div>
+                    <p th:if="${comments==null}">暂无评论</p>
+                </div>
+                <input type="hidden" id="jobId" th:value="${jobInformation.getJobId()}">
+                <input type="hidden" id="busId" th:value="${jobInformation.getJobPublisher()}">
+                <input type="hidden" id="userId" th:if="${session.studentLogin!=null}"
+                       th:value="${session.studentLogin.getStuAccount()}">
+
+                <div class="form-group">
+                    <label for="comment">评论:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
                 </div>
 
-                <form>
-                    <div class="form-group">
-                        <label for="comment">评论:</label>
-                        <textarea class="form-control" rows="5" id="comment"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">提交</button>
-                </form>
+                <button type="button" id="btn" class="btn btn-primary">提交</button>
             </div>
 
         </div>
@@ -168,3 +211,77 @@
 
 </body>
 </html>
+<script>
+    $(function () {
+        $('#btn').click(function () {
+            if ($("#comment") == null || $("#comment") == "") {
+                alert(12);
+            } else {
+                $.ajax({
+                    url: "/user/comment",
+                    type: "GET",
+                    contentType: 'application/x-www-form-urlencoded',
+                    data: {
+                        comment: $('#comment').val(),
+                        jobId: $('#jobId').val(),
+                        busId: $('#busId').val(),
+                        userId: $('#userId').val()
+                    },
+                    success: function (result) {
+                        if (result === "1") {
+                            $('#user-comment').append("<div class=\" border\" style=\"padding: 8px\" th:if=\"${comments!=null}\"\n" +
+                                "                         th:each=\"comment:${comments}\">\n" +
+                                "                        <div>\n" +
+                                "                            <img src=\"https://static.runoob.com/images/mobile-icon.png\"\n" +
+                                "                                 class=\"align-self-start mr-3 rounded-circle\" style=\"width:60px;float:left\">\n" +
+                                "                            <h6 th:text=\"${comment.getCommentUserId()}\">"+$('#userId').val()+"</h6>\n" +
+                                "                            <span class=\"data-001\">"+formartDate()+"</span>\n" +
+                                "                        </div><br>\n" +
+                                "                        <div class=\"media-body\" style=\"margin:8px 0 0 40px\">\n" +
+                                "                            <sapn th:text=\"${comment.getCommentContent()}\">"+$('#comment').val()+"</sapn>\n" +
+                                "                        </div>\n" +
+                                "                        <br>\n" +
+                                "\n" +
+                                "                        <div class=\"p_dt\">\n" +
+                                "                            <span class=\"btn001\">\n" +
+                                "\t\t\t\t\t\t\t    <a href=\"javascript:;\" class=\"infoTop\">0</a>\n" +
+                                "\t\t\t\t\t\t\t    <a href=\"javascript:;\" class=\"infoDown\">0</a>\n" +
+                                "\t\t\t\t\t\t\t    <a href=\"javascript:;\" class=\"infoDel\">删除</a>\n" +
+                                "\t\t\t\t\t\t    </span>\n" +
+                                "                        </div>\n" +
+                                "\n" +
+                                "                    </div>")
+                        } else {
+                            alert(result);
+                        }
+                    },
+                    error: function () {
+                        alert("error");
+                    }
+                })
+            }
+        })
+
+        $("body").delegate(".infoTop", "click", function () {
+            $(this).html(parseInt($(this).html()) + 1);
+        });
+        $("body").delegate(".infoDown", "click", function () {
+            $(this).html(parseInt($(this).html()) + 1);
+        });
+        $("body").delegate(".infoDel", "click", function () {
+            $(this).parents(".media").remove();
+        });
+
+        function formartDate() {
+            var data = new Date();
+            var arr = [data.getFullYear() + "-",
+                data.getMonth() + 1 + "-",
+                data.getDate() + " ",
+                data.getHours() + ":",
+                data.getMinutes() + ":",
+                data.getSeconds()];
+            return arr.join("");
+        }
+
+    })
+</script>

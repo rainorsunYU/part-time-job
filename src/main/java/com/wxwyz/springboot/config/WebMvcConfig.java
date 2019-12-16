@@ -26,13 +26,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 registry.addViewController("/index.html").setViewName("login");
                 registry.addViewController("/main.html").setViewName("business");
                 registry.addViewController("/upload.html").setViewName("uploadJob");
-                registry.addViewController("/jobInfo.html").setViewName("jobInfo");
             }
             //拦截器
             @Override
             public void addInterceptors(InterceptorRegistry registry) {
                 registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                        .excludePathPatterns("/index.html","/static/**","/favicon.ico","/business/login");
+                        .excludePathPatterns("/index.html","/static/**","/favicon.ico","/student/login","/business/login");
             }
         };
         return web;

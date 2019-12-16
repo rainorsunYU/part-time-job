@@ -27,17 +27,13 @@
     </style>
 </head>
 <body>
-<!--<div class="jumbotron text-center" style="margin-bottom:0">-->
-<!--    <h1>我的第一个 Bootstrap 4 页面</h1>-->
-<!--    <p>重置浏览器窗口大小查看效果！</p>-->
-<!--</div>-->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
 
     <div class="container user-drop">
-        <div class="dropdown" th:if="${session.businessLogin != null}">
+        <div class="dropdown" th:if="${session.studentLogin != null}">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" th:text="${session.businessLogin.getAccount()}">
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" th:text="${session.studentLogin.getStuAccount()}">
                 登录
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -46,10 +42,10 @@
                 <a class="dropdown-item" href="#">Another action</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <hr/>
-                <a class="dropdown-item" th:href="@{/business/exit}">退出登录</a>
+                <a class="dropdown-item" href="#">退出登录</a>
             </div>
         </div>
-        <div th:if="${session.businessLogin == null}">
+        <div th:if="${session.studentLogin == null}">
             <button>登录</button>
         </div>
     </div>
@@ -80,12 +76,7 @@
                     <a class="nav-link" href="#">信息</a>
                 </div>
             </li>
-            <li class="nav-item" style="width: 100px;">
-                <div class="div-info">
-                    <img th:src="@{../static/images/icons/write.png}">
-                    <a class="nav-link" th:href="@{/upload.html}">发布</a>
-                </div>
-            </li>
+
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -126,7 +117,7 @@
 <div class="container" style="margin-top:30px;margin-bottom: 30px;max-width: 1300px">
     <div class="row">
         <div class="col-sm-3">
-            <h3>商家</h3>
+            <h3>学生</h3>
             <h4>欢迎使用兼职系统</h4>
             <div class="fakeimg">
                 <img th:src="@{../static/images/show/showforus.jpg}" style="width: 100%;height: 295px">
@@ -175,31 +166,31 @@
         </div>
 
         <div class="col-sm-9">
-            <h4 style="text-align: center">曾经发布的兼职</h4><br/>
-            <div class="media-main" th:if="${jobLists != null}" th:each="jobList :${jobLists}">
+            <h4 style="text-align: center">所有的兼职</h4><br/>
+            <div class="media-main" th:if="${allJobLists!=null}" th:each="allJobList:${allJobLists}">
                 <div>
                     <img th:src="@{../static/images/icons/8_avatar_2754583.png}" class="mr-3 rounded-circle" alt="" style="float: left;height: 55px">
                     <div style="height: 50px">
-                        <h5 class="mt-0" th:text="${jobList.getJobPublisher()}"></h5>
-                        <h6 th:text="${#dates.setFormat(jobList.getJobReleaseTime())}">time</h6>
+                        <h5 class="mt-0" th:text="${allJobList.getJobPublisher()}"></h5>
+                        <h6 th:text="${#dates.setFormat(allJobList.getJobReleaseTime())}">time</h6>
                     </div>
                 </div>
                 <div style="font-size: 20px">
                     <br/><br/>
-                    招聘简介：<p style="font-size: 22px" th:text="${jobList.getJobTitle()}"></p>
-                    招聘人数：<span th:text="${jobList.getUserCounts()}"></span>人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    招聘金额：<span th:text="${jobList.getJobSalary()}"></span>元<br/><br/>
-                    <a th:href="@{/user/info(businessId=${jobList.getJobId()})}">查看详细信息</a>
+                    招聘简介：<p style="font-size: 22px" th:text="${allJobList.getJobTitle()}"></p>
+                    招聘人数：<span th:text="${allJobList.getUserCounts()}"></span>人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    招聘金额：<span th:text="${allJobList.getJobSalary()}"></span>元<br/><br/>
+                    <a th:href="@{/user/info(businessId=${allJobList.getJobPublisher()},jobId=${allJobList.getJobId()})}">查看详细信息</a>
                 </div>
                 <div style="margin-top: 15px;">
-                    回复<span th:text="${jobList.getComments()}">0</span>
-                    浏览<span th:text="${jobList.getViews()}">0</span>
-                    点赞<span th:text="${jobList.getLikes()}">0</span>
+                    回复<span th:text="${allJobList.getComments()}">0</span>
+                    浏览<span th:text="${allJobList.getViews()}">0</span>
+                    点赞<span th:text="${allJobList.getLikes()}">0</span>
                 </div>
             </div>
 
 <!--            <h4 style="text-align: center;margin-top: 30px" th:if="${jobLists == null}">暂无记录...</h4>-->
-            <div class="jumbotron text-center" th:if="${jobLists == null}" style="margin-bottom:0;">
+            <div class="jumbotron text-center"  style="margin-bottom:0;" th:if="${allJobLists == null}">
                 <p>暂无记录...</p>
             </div>
         </div>

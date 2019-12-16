@@ -12,12 +12,18 @@ public interface JobMapper {
 
     public List<String> queryAllPublisher();
 
-    public List<Job> queryJobByName(String name);
+    public List<Job> queryJobByNameDesc(String name);
 
     public Job queryJobById(Integer jobId);
 
     public List<Job> queryAllJob();
 
     public int insertJob(Job job);
+
+    public int updateViews(Integer id);
+
+    public int findComments(Integer id);
+
+    public Integer updateComments(Job job);
 
 }

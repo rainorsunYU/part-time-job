@@ -1,9 +1,14 @@
 package com.wxwyz.springboot;
 
 import com.wxwyz.springboot.domain.Business;
+import com.wxwyz.springboot.domain.Comment;
 import com.wxwyz.springboot.domain.Job;
+import com.wxwyz.springboot.mapper.CommentMapper;
+import com.wxwyz.springboot.mapper.JobMapper;
+import com.wxwyz.springboot.mapper.StudentMapper;
 import com.wxwyz.springboot.service.impl.BusinessServiceImpl;
 import com.wxwyz.springboot.service.impl.JobServiceImpl;
+import com.wxwyz.springboot.service.impl.StudentServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,6 +27,12 @@ class MySpringBoot04ApplicationTests {
 
 //    @Autowired
 //    private BusinessMapper businessMapper;
+
+    @Autowired
+    private CommentMapper commentMapper;
+
+    @Autowired
+    private JobMapper jobMapper;
 
     @Test
     void contextLoads() {
@@ -49,10 +60,33 @@ class MySpringBoot04ApplicationTests {
         job.setJobTitle("我是兼职一");
         job.setJobContent("扫垃圾");
         job.setWorkingHours("6小时");
-        job.setJobSalary(500.00);
+        job.setJobSalary("600每天");
         job.setJobLocation("皖西学院");
         job.setJobReleaseTime(new Date());
         System.out.println(jobServiceImpl.postAJob(job));
+    }
+
+    @Autowired
+    private StudentServiceImpl studentServiceImpl;
+
+
+    @Autowired
+    private StudentMapper studentMapper;
+
+    @Test
+    void test003() {
+        Job job = new Job();
+        job.setJobId(1);
+        job.setComments(10);
+        System.out.println(jobMapper.updateComments(job));
+    }
+
+    @Test
+    void test00123() {
+       List<Comment> list = commentMapper.queryCommentByBusinessId("business0001",1);
+        for (Comment comment : list) {
+            System.out.println(comment);
+        }
     }
 
 }

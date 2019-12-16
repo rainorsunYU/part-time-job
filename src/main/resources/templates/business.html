@@ -46,7 +46,7 @@
                 <a class="dropdown-item" href="#">Another action</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <hr/>
-                <a class="dropdown-item" href="#">退出登录</a>
+                <a class="dropdown-item" th:href="@{/business/exit}">退出登录</a>
             </div>
         </div>
         <div th:if="${session.businessLogin == null}">
@@ -186,7 +186,7 @@
                 </div>
                 <div style="font-size: 20px">
                     <br/><br/>
-                    招聘简介：<p style="font-size: 22px" th:text="${jobList.getJobContent()}"></p>
+                    招聘简介：<p style="font-size: 22px" th:text="${jobList.getJobTitle()}"></p>
                     招聘人数：<span th:text="${jobList.getUserCounts()}"></span>人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     招聘金额：<span th:text="${jobList.getJobSalary()}"></span>元<br/><br/>
                     <a th:href="@{/user/info(businessId=${jobList.getJobId()})}">查看详细信息</a>
